@@ -13,9 +13,10 @@ namespace DiffEquationApproxMethods
             EulerMethod eulerMethod = new EulerMethod();
 
             double[,] EulerResults = eulerMethod.ApproximateSteps(0, 2, 5, 0.05);
-            for(int i=0; i<EulerResults.Length; i++)
+            Console.WriteLine(EulerResults.GetLength(0));
+            for(int i=0; i<EulerResults.GetLength(0); i++)
             {
-                Console.WriteLine("x: " + EulerResults[i, 0] + "y: " + EulerResults[i,1]);
+                Console.WriteLine("x: " + EulerResults[i, 0] + "; y: " + EulerResults[i,1]);
             }
             
 
