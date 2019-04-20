@@ -8,6 +8,6 @@ namespace DiffEquationApproxMethods
 {
     public interface DiffEquaApproximator
     {
-        double[,] ApproximateSteps(double x, double y, int iterates, double StepSize);
+        double[,] ApproximateSteps(double x, double y, int iterates, double stepSize);
     }
 }

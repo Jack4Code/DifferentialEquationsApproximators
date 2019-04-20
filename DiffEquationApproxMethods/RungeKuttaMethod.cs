@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DiffEquationApproxMethods
 {
-    public class EulerMethod : DiffEquaApproximator
+    public class RungeKuttaMethod : DiffEquaApproximator
     {
         //Constructor
-        public EulerMethod() { }
+        public RungeKuttaMethod() { }
 
         public double[,] ApproximateSteps(double Xnaught, double Ynaught, int iterates, double stepSize)
         {
@@ -25,12 +25,28 @@ namespace DiffEquationApproxMethods
 
                 x = results[i, 0] + stepSize;
                 results[i + 1, 0] = x;
+                
 
-                y = (results[i, 1] + (stepSize) * (results[i, 0] - results[i, 1] + 1));
+                y = (results[i, 1] + (stepSize) * (T4(results[i,0],results[i,1],stepSize)));
                 results[i + 1, 1] = y;
             }
 
             return results;
         }
+
+        public double T4(double Xn, double Yn, double stepSize)
+        {
+            double t4 = 0;
+
+            double k1 = Xn - Yn + 1;
+            double k2 = (Xn+(stepSize/2)) - (Yn + (k1*(stepSize / 2))) + 1;
+            double k3 = (Xn + (stepSize / 2)) - (Yn + (k2 * (stepSize / 2))) + 1;
+            double k4 = (Xn + (stepSize)) - (Yn + (k3 * (stepSize))) + 1;
+
+            t4 = (1.0/6.0) * ((k1) + (2*k2) + (2*k3) + (k4));
+
+            return t4;
+        }
+
     }
 }

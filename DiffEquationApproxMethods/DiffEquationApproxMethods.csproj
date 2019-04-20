@@ -45,8 +45,10 @@
     <Compile Include="DiffEquaApproximator.cs" />
     <Compile Include="DifferentialEquation.cs" />
     <Compile Include="EulerMethod.cs" />
+    <Compile Include="HeunsMethod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RungeKuttaMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
