@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiffEquaApproximator.cs" />
-    <Compile Include="DifferentialEquation.cs" />
     <Compile Include="EulerMethod.cs" />
     <Compile Include="HeunsMethod.cs" />
     <Compile Include="Program.cs" />

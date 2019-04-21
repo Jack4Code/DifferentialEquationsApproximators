@@ -14,12 +14,10 @@ namespace DiffEquationApproxMethods
 
         public double[,] ApproximateSteps(double Xnaught, double Ynaught, int iterates, double stepSize)
         {
-
             double[,] results = new double[iterates, 2];
             results[0, 0] = Xnaught;
             results[0, 1] = Ynaught;
 
-            //Calculation goes here
             for (int i = 0; i < iterates - 1; i++)
             {
                 double x;

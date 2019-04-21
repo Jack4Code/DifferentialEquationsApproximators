@@ -17,7 +17,6 @@ namespace DiffEquationApproxMethods
             results[0, 0] = Xnaught;
             results[0, 1] = Ynaught;
 
-            //Calculation goes here
             for (int i = 0; i < iterates - 1; i++)
             {
                 double x;
@@ -29,7 +28,6 @@ namespace DiffEquationApproxMethods
                 y = (results[i, 1] + (stepSize) * (results[i, 0] - results[i, 1] + 1));
                 results[i + 1, 1] = y;
             }
-
             return results;
         }
     }
